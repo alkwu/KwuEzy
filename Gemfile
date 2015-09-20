@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,6 +21,16 @@ gem 'bootstrap-sass', '~> 3.3.5'
 #paperclip 
  gem 'imagemagick-identify', '~> 0.0.1'
  gem 'paperclip', '~> 4.2.1'
+ 
+ group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+ end
+ 
+ group :development, :test do
+  gem 'sqlite3'
+ end
+  
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
