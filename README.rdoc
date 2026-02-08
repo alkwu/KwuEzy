@@ -1,28 +1,39 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains a Rails application scaffold for property listings.
+
+=== Property Intelligence Dossier Workflow (Advisor Prompt)
+
+When creating a "Property Intelligence Dossier" for a client, make sure the
+input always includes a complete property address (street, city, state, ZIP).
+Without a valid address, market comps, tax/insurance flags, and HOA/CDD review
+cannot be computed reliably.
+
+Suggested response structure:
+
+* <thinking_process>: Assess neighborhood tier, volatility, and likely risk flags.
+* <comps>: 3-5 closed sales from the prior 6 months within a 1-mile radius,
+  including address, sale price, sqft, and price/sqft.
+* <property_analysis>: Structural and cosmetic value drivers and renovation gaps.
+* <insider_knowledge>: Three non-listing insights (zoning, school policy,
+  development pipeline, turnover trends).
+* <financial_audit>: Tax assessment consistency, insurance red flags,
+  and HOA/CDD affordability impact on debt-to-income.
+* <stakeholder_summaries>: Buyer-friendly and seller-friendly strategic briefs.
+* <outreach>: Conversion-oriented client email/text summary.
+
+=== Development Notes
 
 Things you may want to cover:
 
 * Ruby version
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
-
-* ...
-
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
