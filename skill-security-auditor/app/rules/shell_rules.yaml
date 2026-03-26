@@ -1,0 +1,5 @@
+rules:
+  - id: shell_usage
+    pattern: "subprocess"
+    severity: medium
+    description: Detect direct shell process usage.

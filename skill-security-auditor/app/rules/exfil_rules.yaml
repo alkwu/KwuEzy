@@ -1,0 +1,5 @@
+rules:
+  - id: suspicious_upload
+    pattern: "requests.post"
+    severity: high
+    description: Detect potential outbound exfiltration callsites.
