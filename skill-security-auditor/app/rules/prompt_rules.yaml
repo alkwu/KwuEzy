@@ -1,0 +1,5 @@
+rules:
+  - id: prompt_injection_marker
+    pattern: "ignore previous instructions"
+    severity: high
+    description: Detect common prompt injection marker text.
